@@ -46,3 +46,8 @@ class AppointmentSerializer(serializers.ModelSerializer):
     class Meta:
         model = Appointment
         fields = ['id', 'patient', 'doctor', 'date', 'time', 'status']
+
+class RewiewSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Review
+        fields = ['id', 'patient', 'doctor', 'rating', 'comment', 'created_at']

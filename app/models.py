@@ -42,3 +42,13 @@ class Appointment(models.Model):
 
     def __str__(self):
         return f"{self.patient} -> {self.doctor} ({self.date} {self.time})"
+
+class Review(models.Model):
+    patient = models.ForeignKey(CustomUser, on_delete=models.CASCADE, related_name='reviews')
+    doctor = models.ForeignKey(Doctor, on_delete=models.CASCADE, related_name='reviews')
+    rating = models.IntegerField(choices=[(i, str(i)) for i in range(1, 6)])  # Оценка от 1 до 5
+    comment = models.TextField()
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f"{self.patient} -> {self.doctor} ({self.rating})"
