@@ -51,3 +51,24 @@ class RewiewSerializer(serializers.ModelSerializer):
     class Meta:
         model = Review
         fields = ['id', 'patient', 'doctor', 'rating', 'comment', 'created_at']
+
+
+class ConsultationRequestSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = ConsultationRequest
+        fields = ['id', 'patient', 'doctor', 'message', 'status', 'created_at']
+
+class MessageSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Message
+        fields = ['id', 'sender', 'receiver', 'text', 'timestamp']
+
+class PrescriptionSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Prescription
+        fields = ['id', 'patient', 'doctor', 'medicines', 'instructions', 'created_at']
+
+class PaymentSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Payment
+        fields = ['id', 'patient', 'doctor', 'amount', 'created_at', 'status']
