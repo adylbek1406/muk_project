@@ -66,7 +66,7 @@ class MessageSerializer(serializers.ModelSerializer):
 class PrescriptionSerializer(serializers.ModelSerializer):
     class Meta:
         model = Prescription
-        fields = ['id', 'patient', 'doctor', 'medicines', 'instructions', 'created_at']
+        fields = ['id', 'patient', 'doctor', 'medicine', 'instructions', 'created_at']
 
 class PaymentSerializer(serializers.ModelSerializer):
     class Meta:
