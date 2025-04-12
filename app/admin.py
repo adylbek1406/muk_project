@@ -52,5 +52,5 @@ class PrescriptionAdmin(admin.ModelAdmin):
 @admin.register(Payment)
 class PaymentAdmin(admin.ModelAdmin):
     list_display = ('id', 'patient', 'doctor', 'amount', 'status', 'created_at')
-    search_fields = ('patient__username', 'doctor__name')
+    search_fields = ('patient__username', 'doctor__name',)
     list_filter = ('status', 'created_at')
