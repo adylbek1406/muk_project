@@ -12,5 +12,5 @@
 ## Установка
 1. Клонировать репозиторий:
    ```sh
-  git clone https://github.com/adylbek1406/muk_project.git
+   git clone https://github.com/adylbek1406/muk_project.git
   
